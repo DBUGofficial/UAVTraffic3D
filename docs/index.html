@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="UAVTraffic3D is a large-scale continuously sampled UAV LiDAR-camera multimodal dataset and construction benchmark for dynamic urban traffic scenes.">
+
+    <meta property="og:title"
+          content="UAVTraffic3D">
+
+    <meta property="og:description"
+          content="A Large-Scale UAV LiDAR-Camera Multimodal Dataset and Construction Benchmark">
+
+    <meta property="og:image"
+          content="assets/images/teaser.jpg">
+
+    <title>UAVTraffic3D</title>
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="container">
+
+        <h1>UAVTraffic3D</h1>
+
+        <h2>
+            A Large-Scale Continuously Sampled UAV LiDAR–Camera
+            Multimodal Dataset and Construction Benchmark
+        </h2>
+
+        <p class="authors">
+            Author One<sup>1</sup>,
+            Author Two<sup>1</sup>,
+            Author Three<sup>2</sup>
+        </p>
+
+        <p class="affiliations">
+            <sup>1</sup>Zhejiang University of Technology
+            &nbsp;&nbsp;
+            <sup>2</sup>Affiliation
+        </p>
+
+        <div class="buttons">
+            <a class="button" href="#" target="_blank">
+                Paper
+            </a>
+
+            <a class="button" href="#" target="_blank">
+                arXiv
+            </a>
+
+            <a class="button"
+               href="https://github.com/YOUR_USERNAME/UAVTraffic3D"
+               target="_blank">
+                Code
+            </a>
+
+            <a class="button" href="#" target="_blank">
+                Dataset
+            </a>
+
+            <a class="button"
+               href="files/supplementary.pdf"
+               target="_blank">
+                Supplementary
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+    <section>
+        <img class="main-image"
+             src="assets/images/teaser.jpg"
+             alt="UAVTraffic3D teaser">
+
+        <p class="caption">
+            UAVTraffic3D provides continuously sampled RGB images,
+            LiDAR scans, calibration parameters, navigation measurements,
+            static maps, and dynamic trajectories for complex urban
+            traffic scenes.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Abstract</h2>
+
+        <p>
+            Constructing high-quality large-scale UAV LiDAR–camera
+            multimodal datasets is fundamental to three-dimensional
+            scene understanding, low-altitude intelligence, and
+            large-scale map reconstruction.
+        </p>
+
+        <p>
+            We present UAVTraffic3D, a large-scale continuously sampled
+            UAV LiDAR–camera multimodal dataset covering six
+            representative urban traffic scenarios. The dataset
+            contains synchronized multimodal observations, calibration
+            parameters, static scene representations, and dynamic
+            trajectories.
+        </p>
+
+        <p>
+            We further introduce a unified dataset construction pipeline
+            integrating temporal synchronization, frame matching,
+            progressive calibration, quality control, static mapping,
+            and dynamic trajectory generation.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Dataset Overview</h2>
+
+        <img class="main-image"
+             src="assets/images/overview.jpg"
+             alt="UAVTraffic3D dataset overview">
+
+        <div class="statistics">
+
+            <div class="stat-card">
+                <strong>75K+</strong>
+                <span>RGB Images</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>26K+</strong>
+                <span>LiDAR Scans</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>6</strong>
+                <span>Representative Scenes</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>Continuous</strong>
+                <span>UAV Flights</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Representative Scenes</h2>
+
+        <div class="scene-grid">
+
+            <div class="scene-card">
+                <h3>T-Intersection</h3>
+            </div>
+
+            <div class="scene-card">
+                <h3>Y-Intersection</h3>
+            </div>
+
+            <div class="scene-card">
+                <h3>Crossroad</h3>
+            </div>
+
+            <div class="scene-card">
+                <h3>Bridge</h3>
+            </div>
+
+            <div class="scene-card">
+                <h3>Campus</h3>
+            </div>
+
+            <div class="scene-card">
+                <h3>Construction</h3>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Dataset Construction Pipeline</h2>
+
+        <img class="main-image"
+             src="assets/images/pipeline.jpg"
+             alt="UAVTraffic3D construction pipeline">
+
+        <p>
+            The pipeline consists of temporal synchronization,
+            sampling-aware frame matching, progressive LiDAR–camera
+            calibration, quality control, dynamic-object removal,
+            static mapping, and multi-frame trajectory generation.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Progressive LiDAR–Camera Calibration</h2>
+
+        <p>
+            Our calibration framework follows a progressive
+            coarse-to-fine strategy and jointly considers field-of-view
+            coverage, reprojection consistency, and cross-modal edge
+            alignment. Static and quasi-stationary UAV observations are
+            used to improve optimization robustness under long-range
+            sensing, sparse LiDAR observations, platform vibration, and
+            complex 6-DoF motion.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Benchmark Tasks</h2>
+
+        <div class="task-grid">
+
+            <article class="task-card">
+                <h3>Calibration</h3>
+                <p>
+                    Evaluation of LiDAR–camera geometric alignment,
+                    reprojection quality, edge consistency, and
+                    field-of-view coverage.
+                </p>
+            </article>
+
+            <article class="task-card">
+                <h3>Static Mapping</h3>
+                <p>
+                    Evaluation of static scene reconstruction after
+                    synchronization, calibration, and dynamic-object
+                    removal.
+                </p>
+            </article>
+
+            <article class="task-card">
+                <h3>Dynamic Trajectories</h3>
+                <p>
+                    Evaluation of multi-frame dynamic-object
+                    reconstruction and temporally consistent
+                    three-dimensional trajectories.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Results</h2>
+
+        <img class="main-image"
+             src="assets/images/results.jpg"
+             alt="Experimental results">
+
+        <p>
+            Quantitative and qualitative results demonstrate the
+            effectiveness and robustness of the proposed construction
+            pipeline across diverse UAV traffic scenes.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Video</h2>
+
+        <video class="project-video"
+               controls
+               preload="metadata">
+
+            <source src="assets/videos/demo.mp4"
+                    type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+        </video>
+    </section>
+
+
+    <section>
+        <h2>Download</h2>
+
+        <p>
+            The dataset, annotations, calibration files, benchmark
+            protocols, and evaluation tools will be released following
+            the project license and data-access policy.
+        </p>
+
+        <div class="buttons">
+            <a class="button" href="#">
+                Dataset Download
+            </a>
+
+            <a class="button" href="#">
+                Documentation
+            </a>
+
+            <a class="button" href="#">
+                Evaluation Toolkit
+            </a>
+        </div>
+    </section>
+
+
+    <section>
+        <h2>BibTeX</h2>
+
+        <pre><code>@article{uavtraffic3d2027,
+  title   = {UAVTraffic3D: A Large-Scale Continuously Sampled
+             UAV LiDAR--Camera Multimodal Dataset and
+             Construction Benchmark},
+  author  = {Author One and Author Two and Author Three},
+  journal = {Proceedings of ...},
+  year    = {2027}
+}</code></pre>
+    </section>
+
+
+    <section>
+        <h2>Acknowledgements</h2>
+
+        <p>
+            We thank all contributors and collaborating institutions
+            involved in platform development, data collection,
+            annotation, and benchmark construction.
+        </p>
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="container">
+        <p>
+            © 2026 UAVTraffic3D Project.
+            This website is hosted by GitHub Pages.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
